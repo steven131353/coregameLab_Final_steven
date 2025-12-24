@@ -25,7 +25,7 @@ public class UI : MonoBehaviour
         scoreTextGo = GameObject.Find("Canvas").transform.Find("ScoreText").gameObject;
 
         textComponent = scoreTextGo.GetComponent<Text>();
-        textComponent.text = "Point£º" + score.ToString() + "/10";
+        textComponent.text = "Point£º" + score.ToString() + "/20";
 
         startpanel = GameObject.Find("Canvas").transform.Find("startpanel").Find("bg");
         introducepanel = GameObject.Find("Canvas").transform.Find("introducepanel").Find("bg");

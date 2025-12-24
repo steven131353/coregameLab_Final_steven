@@ -35,7 +35,7 @@ public class Game : MonoBehaviour
         scoreTextGo = GameObject.Find("Canvas").transform.Find("ScoreText").gameObject;
         texttimer = GameObject.Find("Canvas").transform.Find("timer").gameObject.GetComponent<Text>();
         textComponent = scoreTextGo.GetComponent<Text>();
-        textComponent.text = "Enemies eliminated：" + score.ToString() + "/10";
+        textComponent.text = "Enemies eliminated：" + score.ToString() + "/20";
         texttimer.text = "time left" + 100 + "秒";
         audioSource = GameObject.Find("mp3").GetComponent<AudioSource>();
         introducepanel = GameObject.Find("Canvas").transform.Find("introducepanel").Find("bg");
@@ -100,9 +100,9 @@ public class Game : MonoBehaviour
         
         
             score++;
-            textComponent.text = "Enemies eliminated：" + score.ToString() + "/10";
+            textComponent.text = "Enemies eliminated：" + score.ToString() + "/20";
             audioSource.PlayOneShot(audioClip);
-            if (score == 10)
+            if (score == 20)
             {
                 isfinish = true;
                 endpanel.gameObject.SetActive(true);
@@ -138,10 +138,10 @@ public class Game : MonoBehaviour
         if (other.name.Contains("Gem") || other.name.Contains("Crystal"))
         {
             score++;
-            textComponent.text = "找到爱心数量：" + score.ToString() + "/10";
+            textComponent.text = "找到爱心数量：" + score.ToString() + "/20";
             Destroy(other.gameObject);
             audioSource.PlayOneShot(audioClip);
-            if (score == 10)
+            if (score == 20)
             {
                 isfinish = true;
                 endpanel.gameObject.SetActive(true);
@@ -151,10 +151,11 @@ public class Game : MonoBehaviour
     void Click(GameObject other)
     {
         score++;
-        textComponent.text = "找到爱心数量：" + score.ToString() + "/10";
+        textComponent.text = "找到爱心数量：" + score.ToString() + "/20";
         Destroy(other.gameObject);
         audioSource.PlayOneShot(audioClip);
-        if (score == 10)
+        if (score == 20)
+        if (score == 20)
         {
             isfinish = true;
             endpanel.gameObject.SetActive(true);

@@ -20,7 +20,7 @@ public class Player : MonoBehaviour
     protected  void Start()
     {
 
-           health = 100;
+           health = 10;
         gun = GameObject.Find("Gun").transform;
         spawn = GameObject.Find("Projectile Spawn").transform;
         projectile = Resources.Load<Projectile>("Projectile") as Projectile;

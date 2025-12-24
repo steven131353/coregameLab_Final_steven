@@ -15,8 +15,8 @@ public class Spawn : MonoBehaviour
     }
     void Start()
     {
-        spawnCount = 10;
-        aliveCount = 10;
+        spawnCount = 20;
+        aliveCount = 20;
         MapGenerator.Instance.OnNewWave();
     }
     void Update()
